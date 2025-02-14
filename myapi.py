@@ -50,6 +50,7 @@ def  read_item(user_id:int, db:db_dependency):
 
 
 
+
 @app.delete('/about/delete/{id}',status_code=status.HTTP_200_OK)
 def read_about(id: int,db:db_dependency):
     db_delete=db.query(table_data.info).filter(table_data.info.id==id).first()
